@@ -15,11 +15,26 @@ r = sr.Recognizer()
 #define chatter bot
 chatbot = ChatBot('Bino')
 #define exemplo de conversa
-conversa = []
+conversa = ['olá', 'oi, como você está se sentindo?',
+            'estou com dor de cabeça', 'em que região da cabeça dói?',
+            'do lado direito', 'Você pode estar com enxaqueca. Que tal fazer uma pausa e procurar um lugar tranquilo? Prefere um posto ou um hotel?',
+            'hotel', 'parece que você está procurando um hotel, aqui vão alguns',
+            'do lado esquerdo', 'Você pode estar com enxaqueca. Que tal fazer uma pausa e procurar um lugar tranquilo? Prefere um posto ou um hotel?',
+            'queria dormir', 'parece que você está procurando um hotel, aqui vão alguns',
+            'nas laterais da cabeça', 'está pulsando? Se sim, diga: está pulsando, se não diga: não está pulsando',
+            'está pulsando', 'pode ser por muita tensão, que tal dar uma pausa e relaxar?',
+            'não está pulsando', 'mesmo assim é preocupante, que tal dar uma pausa e esperar passar?',
+            'estou cansado', 'que tal fazer uma pausa? Aqui vão alguns lugares que podem lhe agradar',
+            'estou com sono', 'que tal fazer uma pausa? Aqui vão alguns lugares que podem lhe agradar',
+            'não posso parar', 'que tal comer um pouco então? Uma fruta ou um doce ajudam a nos manter acordados',
+            'estou com dor nas costas', 'você está há muito tempo no volante? Se sim diga: estou há muito tempo no volante, se não, diga: não estou há muito tempo no volante',
+            'estou há muito tempo no volante', 'que tal fazer uma pausa? Se parece uma boa idéia diga: parece uma boa idéia, se não, pense em quando pode parar e me chame para fazer alguns alongamentos com você, dizendo, vamos alongar!!',
+            'parece uma boa idéia', 'Ok, quando parar, me chame dizendo, vamos alongar!',
+            ]
 
 #treina chatter com a conversa exemplo
-trainer = ListTrainer(chatbot)
-trainer.train(conversa)
+#trainer = ListTrainer(chatbot)
+#trainer.train(conversa)
 
 def get_latlng():
     a = geocoder.ip('me')
@@ -46,19 +61,19 @@ def checa_palavra(frase):
     if('posto' in frase or 'abastecer' in frase):
         a = busca_proximidades('posto', 'gasolina')
         return True, a
-    if('passar a noite' or 'dormir' in frase):
+    if('passar a noite' in frase or 'dormir' in frase or 'hotel' in frase):
         a = busca_proximidades('hotel', 'dormir')
         return True, a
-    if('comer' or 'fome' or 'comida' in frase):
+    if('comer' in frase or 'fome' in frase or 'comida' in frase or 'restaurante' in frase in frase):
         a = busca_proximidades('restaurante', 'comida')
         return True, a
-    if('fedor' or 'banho' or 'limp' in frase):
+    if('fedor' in frase or 'banho' in frase or 'limp' in frase):
         a = busca_proximidades('hotel', 'banheiro')
         return True, a
     if('cansado' in frase or 'descansar' in frase):
         a = busca_proximidades('posto', 'descanso')
         return True, a
-    if('banheiro' or 'mijar' in frase):
+    if('banheiro' in frase or 'mijar' in frase):
         a = busca_proximidades('posto', 'banheiro')
         return True, a
 
