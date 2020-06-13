@@ -26,6 +26,9 @@ def responde(resp):
 # Create your views here.
 def ouve(request):
     print('aqui')
+    text = ''
+    resp = ''
+    
     try:
         with sr.Microphone() as source:
             r.adjust_for_ambient_noise(source, duration=0.2)
