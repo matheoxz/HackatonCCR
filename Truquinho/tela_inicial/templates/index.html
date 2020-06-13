@@ -7,6 +7,13 @@
 </head>
 <body>
     <h2>Olá, eu sou Truquinho</h2>
-    <button>Falar</button>
+    <button onclick = "window.location.href = '/ouve'" >Falar</button>
+    {% if fala %}
+    {{ fala }}
+    {% endif %}
+
+    {% if resposta %}
+    {{ resposta }}
+    {% endif %}
 </body>
 </html>
