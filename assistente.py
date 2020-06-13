@@ -8,9 +8,9 @@ from playsound import playsound
 #seta reconhecedor de voz
 r = sr.Recognizer()
 #define chatter bot
-chatbot = ChatBot('Siga Bem Caminhoneiro')
+chatbot = ChatBot('Bino')
 #define exemplo de conversa
-conversa = ['oi', 'olá, tudo bem?', 'tudo e com você?', 'comigo também']
+conversa = ['oi', 'olá, eu sou Bino. tudo bem?', 'tudo e com você?', 'comigo também']
 
 #treina chatter com a conversa exemplo
 trainer = ListTrainer(chatbot)
@@ -35,6 +35,7 @@ while(1):
             text = r.recognize_google(audio_data, language='pt-BR')
             print(text)
             resp = chatbot.get_response(str(text))
+            print(resp)
             responde(str(resp))
     except sr.RequestError as e: 
         print("Could not request results; {0}".format(e)) 
