@@ -1,21 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Truquinho</title>
-</head>
-<body>
-    <h2>Olá, eu sou Truquinho</h2>
-    <button onclick = "window.location.href = '/ouve'" >Falar</button>
-    <br>
-    {% if fala %}
-    {{ fala }}
-    {% endif %}
-    <br>
-    {% if resposta %}
-    {{ resposta }}
-    {% endif %}
-    <br>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Truquinho</title>
+    </head>
+    <body>
+        <h2>Olá, eu sou Truquinho</h2>
+        <button onclick="window.location.href = '/ouve'">Falar</button>
+        <br>
+        {% if fala %}
+            {{ fala }}
+        {% endif %}
+        <br>
+        {% if resposta %}
+            {{ resposta }}
+        {% endif %}
+        <br>
+        {% if lugares %}
+            {%for i in lugares%}
+            <li>
+                {% for j in i %}
+                    {{j}},
+                {% endfor %}
+            </li>
+            {% endfor %}
+        {% endif %}
+    </body>
 </html>
