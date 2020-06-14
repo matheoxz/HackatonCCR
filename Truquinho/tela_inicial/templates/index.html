@@ -1,30 +1,76 @@
 <!DOCTYPE html>
+
 <html lang="en">
+    {% load static%}
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Truquinho</title>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <title>Bino</title>
     </head>
     <body>
-        <h2>Olá, eu sou Truquinho</h2>
-        <button onclick="window.location.href = '/ouve'">Falar</button>
-        <br>
-        {% if fala %}
-            {{ fala }}
-        {% endif %}
-        <br>
-        {% if resposta %}
-            {{ resposta }}
-        {% endif %}
-        <br>
-        {% if lugares %}
-            {%for i in lugares%}
-            <li>
-                {% for j in i %}
-                    {{j}},
-                {% endfor %}
-            </li>
+        <header>
+            <h1>Bino</h1>
+        </header>
+        <div style="height:72px"></div>
+        <div id="container">
+            <div class="messageBot">
+                <p class="body">
+                    Olá, eu sou o Bino, seu assistente de estrada, como que posso te ajudar?</p>
+            </div>
+            {% for f, r in conversa %}
+                <div class="messageUser">
+                    <p class="body">
+                        {% if f %}
+                            {{ f }}
+                        {% endif %}
+                    </p>
+                </div>
+                <div class="messageBot">
+                    <p class="body">
+                        {% if r %}
+                            {{ r }}
+                        {% endif %}
+                    </p>
+                </div>
             {% endfor %}
-        {% endif %}
+            {% if lugares %}
+                <div class="lugares">
+                    <p class="body">
+
+                        {%for i in lugares%}
+                            <li class="body">
+                                {% for j in i %}
+                                    {{j}},
+                                {% endfor %}
+                            </li>
+                        {% endfor %}
+
+                    </p>
+                </div>
+            {% endif %}
+            {% if imagem %}
+                <div class="imagem">
+                    <p class="body">
+                        <img src="{% static 'img/alongamento-05.jpg' %}">
+                    </p>
+                </div>
+            {% endif %}
+        </div>
+
+        <div id="bottom_bar">
+            <div class="bb_container" onclick="window.location.href = '/atendimento'">
+                <img src="{% static 'img/health.png' %}">
+            </div>
+            <div class="bb_container" onclick="window.location.href = '/ouve'">
+                <img style="width: 48px; height: 48px;" src="{% static 'img/mascote.png' %}">
+            </div>
+            <div class="bb_container" onclick="window.location.href = '/perfil'">
+                <img src="{% static 'img/profile.png' %}">
+            </div>
+        </div>
+
+        <!-- <button onclick="window.location.href = '/ouve'">Falar</button> -->
+
     </body>
 </html>

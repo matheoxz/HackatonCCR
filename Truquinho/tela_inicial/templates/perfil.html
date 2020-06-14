@@ -1,0 +1,51 @@
+
+
+<!DOCTYPE html>
+{% load static%}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <title>Truquinho</title>
+    </head>
+    <body>
+        <header>
+            <h1>Perfil</h1>
+        </header>
+        <div style="height:72px"></div>
+        <div>
+            <div id="container">
+                <div style="display: flex;">
+                    <img style=" width: 60px; height: 60px;"src="{% static 'img/user_photo.png' %}" alt="">
+                    <div style="width: 16px;"></div>
+                    <h2>Jorge Lima</h2>
+                </div>
+                <div style="height: 16px;"></div>
+                <div class="boxContainer">
+                    <h3>Favoritos</h3>
+                   </div>
+                   <div class="boxContainer">
+                    <h3>Editar perfil</h3>
+                </div>
+            </div>
+        </div>
+        
+
+        <div id="bottom_bar">
+            <div class="bb_container" onclick="window.location.href = '/atendimento'">
+                <img src="{% static 'img/health.png' %}">
+            </div>
+            <div class="bb_container" onclick="window.location.href = '/ouve'">
+                <img style="width: 48px; height: 48px;" src="{% static 'img/mascote.png' %}">
+                </div>
+            <div class="bb_container" onclick="window.location.href = '/perfil'">
+                <img src="{% static 'img/profile.png' %}">
+            </div>
+        </div>
+        
+        <!-- <button onclick="window.location.href = '/ouve'">Falar</button> -->
+       
+        
+    </body>
+</html>

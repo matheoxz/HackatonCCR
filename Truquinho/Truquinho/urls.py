@@ -20,5 +20,8 @@ from tela_inicial import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name = 'home'),
-    path('ouve', views.ouve, name = 'ouve')
+    path('ouve', views.ouve, name = 'ouve'),
+    path('atendimento', views.atendimento, name = 'atendimento'),
+    path('perfil', views.perfil, name = 'perfil'),
+    path('guia_medica', views.guia, name = 'guia_medica'),
 ]

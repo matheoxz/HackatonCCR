@@ -1,0 +1,54 @@
+
+
+<!DOCTYPE html>
+{% load static%}
+<html lang="en">
+    <head>
+       
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <title>Truquinho</title>
+    </head>
+    <body>
+        <header>
+            <h1>Acompanhamento</h1>
+        </header>
+        <div style="height:72px"></div>
+
+        <div id="tab-container">
+            <div style="display: flex; flex-direction: column; width: 50%;">
+                <div class="tab-button"  onclick="window.location.href = '/atendimento'">
+                    <h3 style="text-align: center;">Atendimentos</h3>
+                </div>
+                <div style="height: 0px; background: #1d6b6f;"></div>
+            </div>
+            <div style="display: flex; flex-direction: column; width: 50%;">
+                <div class="tab-button" onclick="window.location.href = '/guia_medica'">
+                    <h3 style="text-align: center;" >Guia médica</h3>
+                </div>
+                <div style="height: 2px; background: #1d6b6f;"></div>
+            </div>
+        </div>
+
+        <div id="container">
+            <p>não lembro o que tem :( </p>
+        </div>
+
+        <div id="bottom_bar">
+            <div class="bb_container" onclick="window.location.href = '/atendimento'">
+                <img src="{% static 'img/health.png' %}">
+            </div>
+            <div class="bb_container" onclick="window.location.href = '/ouve'">
+                <img style="width: 48px; height: 48px;" src="{% static 'img/mascote.png' %}">
+                </div>
+            <div class="bb_container" onclick="window.location.href = '/perfil'">
+                <img src="{% static 'img/profile.png' %}">
+            </div>
+        </div>
+        
+        <!-- <button onclick="window.location.href = '/ouve'">Falar</button> -->
+       
+        
+    </body>
+</html>

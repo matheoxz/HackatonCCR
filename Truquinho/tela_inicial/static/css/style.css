@@ -1,0 +1,164 @@
+html{
+    margin:0x;
+}
+body{
+    width: 100%;
+    margin:0px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+header {
+    width: 100%;
+    height: 40px;
+    padding: 16px;
+    background-color: #1D6B6F;
+    top:0px;
+    position: fixed;
+    overflow: hidden;
+    
+}
+#container{
+    margin: 16px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.messageBot{
+    width: fit-content;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #FFEDB3;
+    align-self: flex-start;
+    margin-bottom:16px;
+    margin-right: 24px;
+}
+.messageUser{ 
+    width: fit-content;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #F0F0F0;
+    align-self: flex-end;
+    margin-bottom:16px;
+    margin-left: 24px;
+}
+
+.lugares{
+    width: fit-content;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #91c4ac;
+    align-self: flex-start;
+    margin-bottom:16px;
+    margin-left: 24px; 
+}
+
+.imagem{
+    width: fit-content;
+    max-width: 250px;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #919fc4;
+    align-self: flex-start;
+    margin-bottom:16px;
+    margin-left: 24px; 
+}
+
+.imagem img{
+    max-width: 250px;
+    max-height: 250px;
+    width: auto;
+    height: auto;
+}
+
+/* Estilo de textos e fonts */
+h1 {
+    font-size: 20px;
+    font-family: "MuseoModerno";
+    color: #fff;
+    
+}
+h2 {
+    font-size: 18px;
+    font-family: "Ubuntu-Bold";
+    color: #2e2e2e
+}
+h3 {
+    font-size: 16px;
+    margin: 4px;
+    font-family: "Ubuntu-Bold";
+    color: #2e2e2e
+}
+h4 {
+    font-size: 14px;
+    font-family: "Ubuntu-Bold";
+    color: #2e2e2e
+}
+.body {
+    font-size: 16px;
+    font-family: "Ubuntu-Regular";
+    margin:0px;
+    display: inline-block;
+    color: #2e2e2e
+}
+.bodySecondary {
+    font-size: 14px;
+    font-family: "Ubuntu-Regular";
+    color: #2e2e2e
+}
+
+/* Bottom bar */
+#bottom_bar{
+    height: 54;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 4px -4px 10px #F0F0F0 ;
+    bottom:0px;
+    position: fixed;
+    overflow: hidden;
+}
+.bb_container{
+    width: 33%;
+    height: 54px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bb_container > img {
+    height: 32px;
+    width: 32px;
+}
+
+/* Tab */
+#tab-container{
+    display: flex;
+    width: 100%;
+    height: 52px;
+    background-color:#F0F0F0;
+    align-items: center;
+    
+
+}
+.tab-button{
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* Boxes */
+.boxContainer{
+    border-style: solid;
+    border-radius: 8px;
+    border-width: 2px;
+    border-color: #F0F0F0;
+    padding: 12px;
+    margin-top: 12px;
+}
+
